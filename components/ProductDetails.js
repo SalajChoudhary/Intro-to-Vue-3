@@ -9,5 +9,15 @@ app.component('product-details', {
     /*html*/
         `<ul>
             <li v-for="detail in details">{{ detail }}</li>
-        </ul>`
-}
+        </ul>`,
+    data() {
+            return {
+                details: ['50% cotton', '30% wool', '20% polyester']
+            }
+    },
+    computed: {
+            details() {
+                return this.details
+            }
+    }
+})
